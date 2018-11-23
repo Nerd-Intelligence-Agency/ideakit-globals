@@ -14,14 +14,16 @@ Author URI: https://getideakit.com/
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
-//Plugin update check
-require plugin_dir_path( $file ).'/plugin-update-checker.php';
+    //Plugin update check
+    require 'plugin-update-checker/plugin-update-checker.php';
+    $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    	'https://github.com/Nerd-Intelligence-Agency/ideakit-globals.git',
+    	__FILE__,
+    	'ideakit-globals'
+    	);
 
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'https://github.com/Nerd-Intelligence-Agency/ideakit-globals',
-  __FILE__,
-  'IdeaKit_Globals'
-);
+    //Optional: Set the branch that contains the stable release.
+    $myUpdateChecker->setBranch('stage');
 
 //Optional: Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('stage');
