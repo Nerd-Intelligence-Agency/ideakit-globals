@@ -16,11 +16,15 @@ if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 //Plugin update check
 require plugin_dir_path( $file ).'/plugin-update-checker.php';
+
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
   'https://github.com/Nerd-Intelligence-Agency/ideakit-globals',
   __FILE__,
   'IdeaKit_Globals'
 );
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('stage');
 
 //set awesome support to saas mode on
 define('WPAS_REMOTE_NOTIFICATIONS_OFF', true) ;
