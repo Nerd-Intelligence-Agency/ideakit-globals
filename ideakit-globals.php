@@ -9,7 +9,7 @@ Plugin URI: https://nerdintel.com/
 Description: This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page.
 Author: Nerd Inelligence Agency
 Version: 0.0.1
-Author URI: https://nerdintel.com/
+Author URI: https://getideakit.com/
 */
 
 if (!defined('ABSPATH'))
