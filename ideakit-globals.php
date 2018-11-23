@@ -25,9 +25,6 @@ if (!defined('ABSPATH'))
     //Optional: Set the branch that contains the stable release.
     $myUpdateChecker->setBranch('stage');
 
-//Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('stage');
-
 //set awesome support to saas mode on
 define('WPAS_REMOTE_NOTIFICATIONS_OFF', true) ;
 define( 'WPAS_SAAS', true );
