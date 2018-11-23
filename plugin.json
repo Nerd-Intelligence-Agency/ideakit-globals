@@ -3,14 +3,14 @@
 	"version": "0.1",
 	"download_url": "https://github.com/Nerd-Intelligence-Agency/ideakit-globals",
 
-	"homepage": "http://example.com/",
+	"homepage": "http://getideakit.com/",
 	"requires": "4.5",
 	"tested": "4.9.4",
 	"last_updated": "2018-24-11 20:00:00",
 	"upgrade_notice": "Here's why you should upgrade...",
 
 	"author": "Nerd Intelligence Agency",
-	"author_homepage": "https://nerdintel.com/",
+	"author_homepage": "https://getideakit.com/",
 
 	"sections": {
 		"description": "Global changes and updates to the IdeaKit Core and Features.",
