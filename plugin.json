@@ -1,7 +1,7 @@
 {
 	"name": "IdeaKit Globals",
 	"version": "0.2",
-	"download_url": "https://github.com/Nerd-Intelligence-Agency/ideakit-globals.git",
+	"download_url": "https://github.com/Nerd-Intelligence-Agency/ideakit-globals/archive/stage.zip",
 
 	"homepage": "http://getideakit.com/",
 	"requires": "4.9",
