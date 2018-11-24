@@ -17,7 +17,7 @@ if (!defined('ABSPATH'))
     //Plugin update check
     require 'plugin-update-checker/plugin-update-checker.php';
     $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    	'https://github.com/Nerd-Intelligence-Agency/ideakit-globals',
+    	'https://github.com/Nerd-Intelligence-Agency/ideakit-globals/',
     	__FILE__,
     	'ideakit-globals'
     	);
