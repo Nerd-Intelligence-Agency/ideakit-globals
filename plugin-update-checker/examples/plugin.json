@@ -9,11 +9,11 @@
 	"last_updated": "2018-25-11 20:00:00",
 	"upgrade_notice": "Here's why you should upgrade...",
 
-	"author": "Nerd Intelligence Agency",
-	"author_homepage": "https://getideakit.com/",
+	"author": "Janis Elsts",
+	"author_homepage": "http://example.com/",
 
 	"sections": {
-		"description": "Global changes and updates to the IdeaKit Core and Features.",
+		"description": "(Required) Plugin description. Basic HTML can be used in all sections.",
 		"installation": "(Recommended) Installation instructions.",
 		"changelog": "(Recommended) Changelog. <p>This section will be displayed by default when the user clicks 'View version x.y.z details'.</p>",
 		"custom_section": "This is a custom section labeled 'Custom Section'."
