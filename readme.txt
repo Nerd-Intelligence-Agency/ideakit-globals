@@ -27,6 +27,9 @@ e.g.
 
 == Changelog ==
 
+= 0.2.2 =
+move feature into own subfolders.
+
 = 0.2.1 =
 Fix autoupdater github issue.
 
