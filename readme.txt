@@ -27,6 +27,9 @@ e.g.
 
 == Changelog ==
 
+= 0.2.1 =
+Fix autoupdater github issue.
+
 = 0.2 =
 This version adds the auto updater.
 
