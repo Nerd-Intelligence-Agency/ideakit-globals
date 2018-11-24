@@ -15,6 +15,7 @@ Author URI: https://getideakit.com/
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
+require plugin_dir_path( __FILE__ ).'woocommerce/ik-woocommerce.php';
 //Plugin update check
 require plugin_dir_path( __FILE__ ).'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
@@ -29,17 +30,13 @@ define( 'WPAS_SAAS', true );
 
 
 //Remove the submenus from extentions
-add_action( 'admin_menu', 'ik_wc_remove_admin_submenus', 999 );
-function ik_wc_remove_admin_submenus() {
+add_action( 'admin_menu', 'ik_glb_remove_admin_submenus', 999 );
+function ik_glb_remove_admin_submenus() {
 	if (!current_user_can('install_plugins'))
 	//Awesome Support
 	remove_submenu_page( 'edit.php?post_type=ticket', 'wpas-addons' );
 	remove_submenu_page( 'edit.php?post_type=ticket', 'wpas-optin' );
 	remove_submenu_page( 'edit.php?post_type=ticket', 'wpas-status' );
-
-	//woocommerce
-	remove_submenu_page( 'woocommerce', 'wc-addons' );
-	remove_submenu_page( 'woocommerce', 'wc-status' );
 
 	//erp
 	remove_submenu_page( 'erp', 'erp-addons' );
