@@ -22,6 +22,8 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
   __FILE__,
   'ideakit-globals'
 );
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('stage');
 
 /**
  * Check if WooCommerce is active and use edits if so
