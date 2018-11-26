@@ -15,7 +15,6 @@ Author URI: https://getideakit.com/
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-require plugin_dir_path( __FILE__ ).'woocommerce/ik-woocommerce.php';
 //Plugin update check
 require plugin_dir_path( __FILE__ ).'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
@@ -23,6 +22,15 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
   __FILE__,
   'ideakit-globals'
 );
+
+/**
+ * Check if WooCommerce is active
+ **/
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+	include plugin_dir_path( __FILE__ ).'woocommerce/ik-woocommerce.php';
+}
+
+
 
 //set awesome support to saas mode on
 define('WPAS_REMOTE_NOTIFICATIONS_OFF', true) ;
