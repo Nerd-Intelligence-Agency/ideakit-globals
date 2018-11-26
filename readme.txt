@@ -27,8 +27,11 @@ e.g.
 
 == Changelog ==
 
+= 0.2.3 =
+move awesome support into own subfolder.
+
 = 0.2.2 =
-move feature into own subfolders.
+move woocommerce into own subfolder.
 
 = 0.2.1 =
 Fix autoupdater github issue.
