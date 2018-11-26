@@ -24,31 +24,27 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 );
 
 /**
- * Check if WooCommerce is active
+ * Check if WooCommerce is active and use edits if so
  **/
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	include plugin_dir_path( __FILE__ ).'woocommerce/ik-woocommerce.php';
-}
+};
 
+/**
+ * Check if Awesome Support is active and use edits if so
+ **/
+if ( class_exists( 'Awesome_Support' ) ) {
+  include plugin_dir_path( __FILE__ ).'awesome-support/ik-awesome-support.php';
+};
 
-
-//set awesome support to saas mode on
-define('WPAS_REMOTE_NOTIFICATIONS_OFF', true) ;
-define( 'WPAS_SAAS', true );
 
 
 //Remove the submenus from extentions
 add_action( 'admin_menu', 'ik_glb_remove_admin_submenus', 999 );
 function ik_glb_remove_admin_submenus() {
 	if (!current_user_can('install_plugins'))
-	//Awesome Support
-	remove_submenu_page( 'edit.php?post_type=ticket', 'wpas-addons' );
-	remove_submenu_page( 'edit.php?post_type=ticket', 'wpas-optin' );
-	remove_submenu_page( 'edit.php?post_type=ticket', 'wpas-status' );
-
 	//erp
 	remove_submenu_page( 'erp', 'erp-addons' );
-
 	//tickera submenus
 	remove_submenu_page( 'edit.php?post_type=tc_events', 'tc_addons' );
 
