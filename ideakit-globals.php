@@ -35,7 +35,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 /**
  * Check if Awesome Support is active and use edits if so
  **/
-if ( class_exists( 'Awesome_Support' ) ) {
+
+if ( !class_exists( 'Awesome_Support' ) ) {
   include plugin_dir_path( __FILE__ ).'awesome-support/ik-awesome-support.php';
 };
 
